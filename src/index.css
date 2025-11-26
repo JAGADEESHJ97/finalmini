@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark theme - security focused */
+    --background: 222 47% 6%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Cyan primary for trust/security */
+    --primary: 188 95% 52%;
+    --primary-foreground: 222 47% 11%;
+
+    /* Emerald for encrypted/success states */
+    --secondary: 160 84% 39%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+
+    --accent: 188 95% 52%;
+    --accent-foreground: 222 47% 11%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 188 95% 52%;
+
+    --radius: 0.75rem;
+
+    /* Gradients and effects */
+    --gradient-primary: linear-gradient(135deg, hsl(188 95% 52%), hsl(188 95% 42%));
+    --gradient-encrypted: linear-gradient(135deg, hsl(160 84% 39%), hsl(160 84% 29%));
+    --shadow-glow: 0 0 40px hsl(188 95% 52% / 0.3);
+    --shadow-encrypted: 0 0 30px hsl(160 84% 39% / 0.3);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
